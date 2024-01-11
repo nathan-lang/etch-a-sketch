@@ -31,3 +31,24 @@ buttons.forEach((button) => {
     alert(button.id);
   });
 });
+
+let canDraw = false;
+
+document.body.onclick = () => {
+  if (canDraw === false) {
+    canDraw = true;
+  } else {
+    canDraw = false;
+  }
+  console.log(canDraw);
+};
+
+const buts = document.querySelectorAll(".square");
+
+buts.forEach((but) => {
+  but.addEventListener("mouseover", function (e) {
+    if (canDraw) {
+      e.target.style.background = "red";
+    }
+  });
+});
