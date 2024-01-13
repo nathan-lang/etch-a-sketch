@@ -1,14 +1,21 @@
 const body = document.body;
+body.height = "100vh";
+body.style.position = "absolute";
+body.style.top = "50%";
+body.style.left = "50%";
+body.style.transform = "translate(-50%, -50%)";
 
 const div1 = document.createElement("div");
 const header = document.createElement("h1");
 header.textContent = "Etch-a-sketch";
+header.style.fontFamily = "Poppins";
 div1.append(header);
 body.append(div1);
 
 const div2 = document.createElement("div");
 const header2 = document.createElement("h2");
 header2.innerHTML = "Draw Mode: Off";
+header2.style.fontFamily = "Poppins";
 body.append(header2);
 
 let canDraw = false;
